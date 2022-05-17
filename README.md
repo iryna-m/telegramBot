@@ -19,7 +19,9 @@ Add to enviromental variables
 To run the bot please use Python 3,7 or higer
 
 Set dependencies
+
 pip install -r requirements.txt
 
 Run the bot
+
 python3 telegramBot.py
