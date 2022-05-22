@@ -22,21 +22,8 @@ async def on_shutdown(dispatcher):
 
 
 if __name__ == '__main__':
+    executor.start_polling(dp, on_startup=on_startup)
 
-    executor.start_webhook(dispatcher=dp,
-                           webhook_path='',
-                           on_startup=on_startup,
-                           on_shutdown=on_shutdown,
-                           skip_updates=True,
-                           host='0.0.0.0',
-                           port=int(os.environ.get('PORT', '8443')))
-
-    # executor.start_webhook(listen='0.0.0.0', port=int(os.environ.get('PORT', '8443')),
-    #                        url_path=os.getenv('BOT_TOKEN'),
-    #                        webhook_url='https://{}.herokuapp.com/{}'.format(os.environ.get('APP_NAME'),
-    #                                                                         os.getenv('BOT_TOKEN')))
-
-    # executor.start_polling(dp, on_startup=on_startup)
     # if MODE == 'dev':
     #     def run():
     #         logger.info('Starting in DEV mode')

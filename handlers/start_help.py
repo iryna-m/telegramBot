@@ -5,7 +5,6 @@ from loader import dp
 from states.states import ForecastQuery
 
 
-# Добавь здесь обработчик введенного текста, а не нажатой кнопки!!!
 @dp.message_handler(commands=['start'])
 async def process_start_command(message: types.Message):
     user_name = message.from_user.first_name
