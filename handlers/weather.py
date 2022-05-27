@@ -13,7 +13,7 @@ from loader import dp, bot
 from states.states import ForecastQuery
 
 
-@dp.message_handler(Text(equals='Узнать погоду'), state=None)
+@dp.message_handler(Text(equals='Get Weather'), state=None)
 async def get_weather(message: types.Message):
     await ForecastQuery.waiting_for_location.set()
     await message.answer(get_message('get_weather'), reply_markup=keyboard_get_weather)
@@ -21,8 +21,8 @@ async def get_weather(message: types.Message):
 
 @dp.message_handler(content_types='text', state=None)
 async def text_handler(message: types.Message):
-    if message.text != 'Узнать погоду':
-        await message.reply('Сначала нажми на кнопу "Узнать погоду", а затем вводи имя города в поле ввода')
+    if message.text != 'Get Weather':
+        await message.reply('Click on "Get Weather" first and then enter a city name')
 
 
 @dp.message_handler(content_types=['location'], state=ForecastQuery.waiting_for_location)
@@ -61,13 +61,12 @@ async def request_weather(message: types.Message, state: FSMContext):
     location = data.get('answer1')
     lat = location[0]
     lon = location[1]
-    await message.answer('Пошел узнавать погоду....', reply_markup=types.ReplyKeyboardRemove())
-    if duration == 'Погода на сегодня':
+    await message.answer('I went to find out the forecast....', reply_markup=types.ReplyKeyboardRemove())
+    if duration == 'Current weather forecast':
         try:
             r = requests.get(
                 f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OW_TOKEN}&units=metric')
             data = r.json()
-            pprint(data)
             city = data['name']
             cur_weather = data['main']['temp']
             humidity = data['main']['humidity']
@@ -82,7 +81,7 @@ async def request_weather(message: types.Message, state: FSMContext):
             await message.answer(get_message('weather_for_location_retrieval_failed'), reply_markup=keyboard_start)
         finally:
             await state.finish()
-    elif duration == 'Предпочитаю погоду на 5 дней':
+    elif duration == '5 Days forecast':
         try:
             r = requests.get(f'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=current,'
                              f'minutely,hourly,alerts&units=metric&exclude=&appid={OW_TOKEN}')

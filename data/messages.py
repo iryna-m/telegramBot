@@ -1,21 +1,21 @@
 MESSAGES = {
-    'start': 'Привет, <b>{}</b>! \n Если хочешь узнать погоду - нажимай (кнопка внизу) ',
+    'start': 'Hi there, <b>{}</b>! \n If you willing to know forecast - click the button bellow ',
 
-    'get_weather': 'Ты можешь ввести имя города в поле ввода'
-             ' или воспользоваться кнопкой "Отправить свою локацию"',
+    'get_weather': 'You can simple enter the city in to the text field'
+             ' or use the "Send current location" button',
 
-    'forecast_duration': 'Принято, выбери за какой период тебе нужен прогноз?',
-    'geocoding_failure': 'Не удалось определить местонахождение по координатам, попробуй ввести город в поле ввода',
+    'forecast_duration': 'Got it, and now choose the forecast option',
+    'geocoding_failure': 'It is impossible to find you by geolocation, could you enter city name in to the text field',
 
-    'weather_for_location_retrieval_failed': 'Не получилось узнать погоду в этой локации 😞,' +
-                                             'предлагаем посмотреть, какая погода за окном. '
-                                             '\n\n /help - инструкция по использованию бота.',
+    'weather_for_location_retrieval_failed': 'Could not get forecast for this location 😞,' +
+                                             'you can look out the window. '
+                                             '\n\n /help - a manual how to use bot.',
 
-    'general_failure': 'Я такое не умею 😞.\n\n /help - инструкция по использованию бота.',
+    'general_failure': 'I can not dance like that 😞.\n\n /help - a manual how to use bot.',
 
-    'current_weather_message': 'Погода в городе: {}\n '
-                               'Температура: {}C°\n '
-                               'Влажность воздуха: {}\n Ветер: {}\n Солнышко зайдет: {}',
+    'current_weather_message': 'City weather: {}\n '
+                               'Temp: {}C°\n '
+                               'Humidity: {}\n Wind: {}\n Sunset: {}',
     '5_days_weather_message': '\n'
                               '{} ---- {}C° ---- {} \n'
                               '{} ---- {}C° ---- {} \n'
@@ -23,12 +23,12 @@ MESSAGES = {
                               '{} ---- {}C° ---- {} \n'
                               '{} ---- {}C° ---- {} \n'
                               '\n'
-                              'Если хочешь посмотреть более подробное описание нажимай на кнопку "Детали здесь"',
+                              'If you want to get more info click "Details"',
 
-    'help': 'Я подскажу тебе погоду:\n Шаг№1 - Нажми кнопку "Узнать погоду" '
-            'Шаг№1 - Введи город или воспользуйся кнопкой "Отправить локацию" \n '
-            'Шаг№3 - Выбери временной диапазон \n И наслаждайся полученной информацией! \n '
-            'Чтобы начать просто введи /start',
+    'help': 'I help you to know what to wear:\n Step№1 - Click "Get Weather" '
+            'Step№2 - Enter the city in to the text field or use the "Send current location" button \n '
+            'Step№3 - Choose an option \n And use the information as you need! \n '
+            'Just /start the bot using menu or text field',
 }
 
 
