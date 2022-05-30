@@ -1,4 +1,4 @@
-# WeatherTelegramBot
+# WeatherTelegramBot (pet project)
 Forecast Weather TG Bot that allows you to get weather info for current day and for 5 days as well.
 Bot can be found by https://t.me/ss_weather_bot
 
