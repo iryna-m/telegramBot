@@ -3,9 +3,9 @@ Forecast Weather TG Bot that allows you to get weather info for current day and 
 Bot can be found by https://t.me/ss_weather_bot
 
 ## Service Info
-Programing language - python
-Used library - aiogram
-Designed long polling bot - there is no need to use external IP, can be run on any machine that is using api.telegram.org.
+- Programing language - python
+- Used library - aiogram
+- Designed long polling bot - there is no need to use external IP, can be run on any machine that is using api.telegram.org.
 
 ## Workflow
 - User send the current geo location or enter neede place to the text field and send it to the bot
@@ -25,4 +25,4 @@ Set dependencies
 
 Run the bot
 
-`python3 telegramBot.py`
+`python3 app.py`
